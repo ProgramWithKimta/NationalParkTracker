@@ -24,16 +24,16 @@ input:-moz-placeholder {
 
 a {
   font-weight: 500;
-  color: #67AAF9;
+  color: rgb(95, 111, 82);
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #B95F89;
+  color: rgb(185, 148, 112);
 }
 
 body {
-  background: #2EC0F9;
+  background: whitesmoke;
   background-size: cover;
   background-repeat: no-repeat no-repeat;
   background-position: center center;
@@ -46,15 +46,15 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  color: #9FCC2E;
+  color: rgb(95, 111, 82);
 }
 
 h3 {
-  color: #4B6858;
+  color: rgb(95, 111, 82);
 }
 
 h4 {
-  color: #424C55;
+  color: rgb(185, 148, 112);
 }
 
 button {
@@ -65,14 +65,14 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #fff;
+  background-color: rgb(254, 250, 224);
   cursor: pointer;
   transition: border-color 0.25s;
-  color: #67AAF9;
+  color: rgb(95, 111, 82);
 }
 
 button:hover {
-  border-color: #058ed9;
+  border-color: rgb(185, 148, 112);
 }
 
 button:focus,
@@ -90,12 +90,12 @@ main {
 
 tr {
   border-radius: 10px;
-  background-color: #000;
-  color: white;
+  background-color: whitesmoke;
+  color: rgb(169, 179, 136);
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #333333;
+  background-color: whitesmoke;
 }
 
 /* Navbar Content */
@@ -112,7 +112,7 @@ tbody tr:nth-child(odd) {
 }
 
 .nav-title a {
-  color: #B95F89;
+  color: rgb(95, 111, 82);
 }
 
 .nav-item {
@@ -129,7 +129,7 @@ tbody tr:nth-child(odd) {
 .main-list > div > a {
   display: flex;
   justify-content: center;
-  color: #B95F89;
+  color: rgb(95, 111, 82);
 }
 
 .work-list {
@@ -144,8 +144,8 @@ tbody tr:nth-child(odd) {
   width: 300px;
   height: 300px;
   margin: 5% 5%;
-  border: 3px solid #424C55;
-  box-shadow: 10px 5px 5px black;
+  border: 3px solid rgb(185, 148, 112);
+  box-shadow: 10px 5px 5px rgb(185, 148, 112);
 }
 
 .volunteer {
@@ -158,7 +158,7 @@ tbody tr:nth-child(odd) {
 }
 
 .new-volunteer > a {
-  color: #B95F89;
+  color: rgb(169, 179, 136);
 }
 
 .volunteer-list {
@@ -172,8 +172,8 @@ tbody tr:nth-child(odd) {
   width: 250px;
   height: 300px;
   margin: 5% 5%;
-  border: 3px solid #424C55;
-  box-shadow: 10px 5px 5px black;
+  border: 3px solid rgb(95, 111, 82);
+  box-shadow: 10px 5px 5px rgb(95, 111, 82);
 }
 
 .form-container {
@@ -185,7 +185,7 @@ tbody tr:nth-child(odd) {
 .form {
   width: 50%;
   height: 80%;
-  background-color: #E3D7FF;
+  background-color: rgb(169, 179, 136);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,7 +199,7 @@ tbody tr:nth-child(odd) {
 }
 
 .form > label {
-  color: #4B6858;
+  color: rgb(95, 111, 82);
 }
 
 .form > textarea {
