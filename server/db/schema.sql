@@ -1,0 +1,5 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS npdtracker_db;
+
+-- CREATE DATABASE
+CREATE DATABASE npdtracker_db;
