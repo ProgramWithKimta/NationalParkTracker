@@ -14,12 +14,12 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <LogIn />
+        element: <HomePage />
       }, 
       {
-        path: '/HomePage',
-        element: <HomePage />
-      }
+        path: '/login',
+        element: <LogIn />
+      }, 
     ]
   }
 ]);
@@ -30,3 +30,31 @@ if(rootElement) {
     <RouterProvider router={router} />
   );
 }
+
+//older version before Hoa worked on adding 
+// {
+  //path: '/login',  // This will render the LogIn component at the "/login" path
+  //element: <LogIn />
+// },
+//
+
+// const router = createBrowserRouter([
+//   {
+//     path: '/',
+//     element: <App />,
+//     children: [
+//       {
+//         index: true,
+//         element: <LogIn />
+//       }, 
+//       {
+//         path: '/login',
+//         element: <LogIn />
+//       }, 
+//       {
+//         path: '/HomePage',
+//         element: <HomePage />
+//       }
+//     ]
+//   }
+// ]);
