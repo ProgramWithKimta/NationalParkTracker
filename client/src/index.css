@@ -20,11 +20,6 @@ input:-moz-placeholder {
   text-align:right; 
 }
 
-div {
-  max-width: fit-content;
-  max-height: fit-content;
-}
-
 a {
   font-weight: 500;
   color: rgb(95, 111, 82);
@@ -33,6 +28,12 @@ a {
 
 a:hover {
   color: rgb(185, 148, 112);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -44,6 +45,14 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  color: black;
+  width: 100%;
+  flex: 1;
 }
 
 .header-name {
@@ -55,6 +64,10 @@ body {
 .header-logo {
   height: 100px;  /* Adjust the size of the logo */
   margin-right: 10px; /* Space between the logo and the heading */
+}
+
+.footer-p { 
+  text-align: center;
 }
 
 h1 {
@@ -75,14 +88,6 @@ h3 {
 
 h4 {
   color: rgb(185, 148, 112);
-}
-
-main {
-  color: black;
-  width: 100%;
-  min-height: 100vh;
-  /* display: flex;
-  flex-direction: row; */
 }
 
 tr {
