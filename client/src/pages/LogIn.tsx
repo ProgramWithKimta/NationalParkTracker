@@ -1,4 +1,3 @@
-import Footer from "../components/footer";
 import "../login.css";
 
 function LogIn () {
@@ -22,8 +21,6 @@ function LogIn () {
         <button className="login-btn" type="submit">Log In</button>
 
     </div>
-
-    <Footer />
 
     </>
 }
