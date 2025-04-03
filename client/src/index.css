@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
   font-family: 'Inter Tight', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -49,66 +47,18 @@ h1 {
   color: rgb(95, 111, 82);
 }
 
+h2 {
+  color: rgb(95, 111, 82);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 h3 {
   color: rgb(95, 111, 82);
 }
 
 h4 {
   color: rgb(185, 148, 112);
-}
-
-.login-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 100%;
-}
-
-
-input[type="text"],
-textarea {
-  max-width: 100%;               
-  padding: 20px;            
-  font-size: 12px;          
-  border-radius: 5px;        
-  border: 1px solid rgb(95, 111, 82);
-  background: whitesmoke; 
-  color: black;
-}
-
-textarea {
-  resize: vertical;          
-}
-
-label {
-  color: rgb(95, 111, 82);
-  font-weight: bold;
-  display: flex;
-  justify-content: baseline;
-}
-
-.login-btn {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  margin: 5% 7%;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: rgb(95, 111, 82);
-  cursor: pointer;
-  transition: border-color 0.25s;
-  color: rgb(254, 250, 224);
-}
-
-.login-btn:hover {
-  border-color: rgb(95, 111, 82);
-  background-color: rgb(185, 148, 112);
-}
-
-.login-btn:focus,
-button.login-btn:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 main {
@@ -205,40 +155,4 @@ tbody tr:nth-child(odd) {
   margin: 5% 5%;
   border: 3px solid rgb(95, 111, 82);
   box-shadow: 10px 5px 5px rgb(95, 111, 82);
-}
-
-.form-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.form {
-  width: 50%;
-  height: 80%;
-  background-color: rgb(169, 179, 136);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.form > input {
-  margin-top: 3%;
-  margin-bottom: 3%;
-  text-align: center;
-}
-
-.form > label {
-  color: rgb(95, 111, 82);
-}
-
-.form > textarea {
-  width: 350px;
-  height: 100px;
-  text-align: center;
-}
-
-.form > select {
-  text-align: center;
 }
