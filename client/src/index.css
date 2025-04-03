@@ -20,6 +20,11 @@ input:-moz-placeholder {
   text-align:right; 
 }
 
+div {
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
 a {
   font-weight: 500;
   color: rgb(95, 111, 82);
@@ -41,8 +46,19 @@ body {
   min-height: 100vh;
 }
 
+.header-name {
+  display: flex;               /* Use flexbox to align items in a row */
+  align-items: center;         /* Vertically center the items */
+  justify-content: flex-start; /* Align items to the start of the header */
+}
+
+.header-logo {
+  height: 100px;  /* Adjust the size of the logo */
+  margin-right: 10px; /* Space between the logo and the heading */
+}
+
 h1 {
-  font-size: 3.2em;
+  font-size: 5rem;
   line-height: 1.1;
   color: rgb(95, 111, 82);
 }
@@ -65,8 +81,8 @@ main {
   color: black;
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
 }
 
 tr {
