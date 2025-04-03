@@ -20,16 +20,6 @@ input:-moz-placeholder {
   text-align:right; 
 }
 
-a {
-  font-weight: 500;
-  color: rgb(95, 111, 82);
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: rgb(185, 148, 112);
-}
-
 #root {
   min-height: 100vh;
   display: flex;
@@ -48,6 +38,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 
 main {
   color: black;
@@ -68,6 +59,16 @@ main {
 
 .footer-p { 
   text-align: center;
+}
+
+a {
+  font-weight: 500;
+  color: rgb(95, 111, 82);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: rgb(185, 148, 112);
 }
 
 h1 {
