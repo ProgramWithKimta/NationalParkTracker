@@ -1,10 +1,9 @@
-import Header from "../components/header";
 import Footer from "../components/footer";
 import "../login.css";
 
 function LogIn () {
     return <>
-    <Header />
+
     <div className="login-form">
 
         <label htmlFor="username"><h2>Username</h2></label> 
