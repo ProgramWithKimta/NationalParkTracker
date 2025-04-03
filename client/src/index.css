@@ -57,7 +57,37 @@ h4 {
   color: rgb(185, 148, 112);
 }
 
-button {
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+
+input[type="text"],
+textarea {
+  max-width: 100%;               
+  padding: 20px;            
+  font-size: 12px;          
+  border-radius: 5px;        
+  border: 1px solid rgb(95, 111, 82);
+  background: whitesmoke; 
+  color: black;
+}
+
+textarea {
+  resize: vertical;          
+}
+
+label {
+  color: rgb(95, 111, 82);
+  font-weight: bold;
+  display: flex;
+  justify-content: baseline;
+}
+
+.login-btn {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -65,18 +95,19 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: rgb(254, 250, 224);
+  background-color: rgb(95, 111, 82);
   cursor: pointer;
   transition: border-color 0.25s;
-  color: rgb(95, 111, 82);
+  color: rgb(254, 250, 224);
 }
 
-button:hover {
-  border-color: rgb(185, 148, 112);
+.login-btn:hover {
+  border-color: rgb(95, 111, 82);
+  background-color: rgb(185, 148, 112);
 }
 
-button:focus,
-button:focus-visible {
+.login-btn:focus,
+button.login-btn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
