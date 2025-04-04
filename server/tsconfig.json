@@ -1,13 +1,29 @@
 {
-  "extends": "../tsconfig.json",
   "compilerOptions": {
-    /* Modules */
-    "rootDir": "src" /* Specify the root folder within your source files. */,
-
-    /* Emit */
-    "outDir": "dist" /* Specify an output folder for all emitted files. */
-    // "noEmitOnError": true /* Disable emitting files if any type checking errors are reported. */
+    "module": "commonjs",
+    "target": "ES2020",
+    "outDir": "./dist",  // Specify where to compile the server code
+    "rootDir": "./src",  // Specify where to find the TypeScript files
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
-  "include": ["src"],
-  "typeRoots": ["./node_modules/@types", "./src/types"]
+  "include": [
+    "src/**/*"  // Include all the server-side code in the src folder
+  ]
 }
+
+
+// Old version 
+// {
+//   "extends": "../tsconfig.json",
+//   "compilerOptions": {
+//     /* Modules */
+//     "rootDir": "src" /* Specify the root folder within your source files. */,
+
+//     /* Emit */
+//     "outDir": "dist" /* Specify an output folder for all emitted files. */
+//     // "noEmitOnError": true /* Disable emitting files if any type checking errors are reported. */
+//   },
+//   "include": ["src"],
+//   "typeRoots": ["./node_modules/@types", "./src/types"]
+// }

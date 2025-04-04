@@ -1,9 +1,9 @@
 // server/routes/auth.ts
-
+import { models } from '../models'; 
 import express, { Request, Response } from 'express';  // Importing types
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
-import { User } from '../models';  // Adjust this import if needed
+import Userdata from '../models/userdata';  // Adjust this import if needed
 
 const router = express.Router();
 
@@ -13,7 +13,7 @@ router.post('/login', async (req: Request, res: Response) => {
 
   try {
     // Find the user by email
-    const user = await User.findOne({ where: { email } });
+    const user = await Userdata.findOne({ where: { email } });
 
     if (!user) {
       // Return a response immediately if user not found
