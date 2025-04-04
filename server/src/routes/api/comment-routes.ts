@@ -14,7 +14,7 @@ router.get('/', async (_req: Request, res: Response) => {
   }
 });
 
-// GET /comment/:id - Get feedback by ID
+// GET /comment/:id - Get comment by ID
 router.get('/:id', async (req: Request, res: Response) => {
   try {
     const comment = await Comment.findByPk(req.params.id);
@@ -28,7 +28,7 @@ router.get('/:id', async (req: Request, res: Response) => {
   }
 });
 
-// POST /feedback - Create new feedback
+// POST /comment - Create new comment
 router.post('/', async (req: Request, res: Response) => {
   try {
     const newComment = await Comment.create(req.body);

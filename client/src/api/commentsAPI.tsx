@@ -54,4 +54,4 @@ const addComment = async (body: CommentData) => {
         return Promise.reject('Could not create comment');
     }
 }
-export default { retrieveComments, addComment };
+export { retrieveComments, addComment };

@@ -1,5 +1,5 @@
 import { useState, FormEvent, ChangeEvent } from "react";
-import addComment from "../api/commentsAPI";   // Import the function to add comment from the API
+import { addComment } from "../api/commentsAPI";   // Import the function to add comment from the API
 
 // Define the CommentForm component
 const CommentForm = () => {
