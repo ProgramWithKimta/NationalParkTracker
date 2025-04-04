@@ -23,7 +23,7 @@ const retrieveComments = async () => {
         console.log('Error from data retrieval:', err);
         return [];
     }
-},
+}
 
 
 // This function sends a POST request to the '/api/comment/' endpoint with the
