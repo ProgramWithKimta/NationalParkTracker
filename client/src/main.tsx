@@ -13,13 +13,13 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        index: true,
+        index: true,  // This ensures "/" goes to HomePage
         element: <HomePage />
       }, 
       {
-        path: '/login',
+        path: 'login', // ⬅️ Removed the leading slash
         element: <LogIn />
-      }, 
+      }
     ]
   }
 ]);
