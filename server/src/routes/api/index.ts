@@ -9,7 +9,6 @@ router.get('/parks', async (req, res) => {
     try {
       const apiUrl = `https://developer.nps.gov/api/v1/parks?limit=${limit}&start=${start}&q=${q}&sort=${sort}`;
       console.log("API URL:", apiUrl); 
-  
       const response = await fetch(apiUrl, {
         headers: {
           'Authorization': `Bearer ${process.env.NPS_API_KEY || ''}`,
