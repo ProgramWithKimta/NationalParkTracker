@@ -11,12 +11,11 @@ const DisplayComment= () => {
         }
         getComments();
     }, []) 
-    return <div>
+    return <div className="display-comm-box">
         {comments.map((c: {comment: string}) => {
             return (
             <div>
-                <p> {c.comment}
-                </p>
+            <p className="display-comment"> {c.comment} </p>
             </div>    
             )
         })}

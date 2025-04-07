@@ -47,19 +47,40 @@ main {
 }
 
 .header-name {
-  display: flex;               /* Use flexbox to align items in a row */
-  align-items: center;         /* Vertically center the items */
-  justify-content: flex-start; /* Align items to the start of the header */
+  display: flex;              
+  align-items: center;        
+  justify-content: flex-start; 
 }
 
 .header-logo {
-  height: 100px;  /* Adjust the size of the logo */
-  margin-right: 10px; /* Space between the logo and the heading */
+  height: 100px;
+  margin-right: 10px; 
 }
 
 .footer-p { 
   text-align: center;
 }
+
+.display-comm-box {
+  display: flex;
+  width: 50%;
+  margin-left: auto;
+  padding: 10px;            
+  font-size: 15px;          
+  border-radius: 5px;        
+  border: 1px solid rgb(95, 111, 82);
+  background: whitesmoke; 
+  color: black;
+}
+
+/* .display-comment {      
+  padding: 20px;            
+  font-size: 15px;          
+  border-radius: 5px;        
+  border: 1px solid rgb(95, 111, 82);
+  background: whitesmoke; 
+  color: black;
+} */
 
 a {
   font-weight: 500;
@@ -70,6 +91,7 @@ a {
 a:hover {
   color: rgb(185, 148, 112);
 }
+
 
 h1 {
   font-size: 5rem;
@@ -101,7 +123,7 @@ tbody tr:nth-child(odd) {
   background-color: whitesmoke;
 }
 
-/* Navbar Content */
+/* Navbar Content
 .nav {
   display: flex;
   align-items: center;
@@ -177,4 +199,4 @@ tbody tr:nth-child(odd) {
   margin: 5% 5%;
   border: 3px solid rgb(95, 111, 82);
   box-shadow: 10px 5px 5px rgb(95, 111, 82);
-}
+} */
