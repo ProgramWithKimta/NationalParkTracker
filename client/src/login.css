@@ -1,0 +1,68 @@
+/* styling for just the login page */
+
+body {
+    background: whitesmoke url("https://img.freepik.com/free-photo/beautiful-view-trees-rain-forest-captured-foggy-weather_181624-9022.jpg?t=st=1743639482~exp=1743643082~hmac=4ed1297764dd61c40d3a551330e3fbb12f399128a3d1cd9e50dd3a2b0efe9e09&w=996");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  .login-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    background: transparent;
+  }
+  
+  
+  input[type="text"],
+  textarea {
+    max-width: 100%;               
+    padding: 20px;            
+    font-size: 15px;          
+    border-radius: 5px;        
+    border: 1px solid rgb(95, 111, 82);
+    background: whitesmoke; 
+    color: black;
+  }
+  
+  textarea {
+    resize: vertical;          
+  }
+  
+  label {
+    color: rgb(95, 111, 82);
+    font-weight: bold;
+    display: flex;
+  }
+  
+  .login-btn {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    margin: 5% 7%;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: rgb(95, 111, 82);
+    cursor: pointer;
+    transition: border-color 0.25s;
+    color: rgb(254, 250, 224);
+    margin-left: 0;
+    margin-right: 0
+  }
+  
+  .login-btn:hover {
+    border-color: rgb(95, 111, 82);
+    background-color: rgb(185, 148, 112);
+  }
+  
+  .login-btn:focus,
+  .login-btn:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
