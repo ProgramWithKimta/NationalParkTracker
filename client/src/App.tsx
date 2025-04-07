@@ -6,15 +6,6 @@ import Footer from "./components/footer";
 function App() {
   return (
     <>
-<<<<<<< HEAD
-    <Header />
-      <main>
-        <Outlet />
-      </main>
-    <Footer />
-  </>
-  );
-=======
       <Header />
         <main>
           <Outlet />
@@ -22,7 +13,6 @@ function App() {
         <Footer />
     </>
   )
->>>>>>> develop
 }
 
 export default App
