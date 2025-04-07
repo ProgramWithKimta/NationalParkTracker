@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
   font-family: 'Inter Tight', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -22,18 +20,14 @@ input:-moz-placeholder {
   text-align:right; 
 }
 
-a {
-  font-weight: 500;
-  color: #67AAF9;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #B95F89;
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-  background: #2EC0F9;
+  background: whitesmoke;
   background-size: cover;
   background-repeat: no-repeat no-repeat;
   background-position: center center;
@@ -41,64 +35,95 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  color: #9FCC2E;
-}
-
-h3 {
-  color: #4B6858;
-}
-
-h4 {
-  color: #424C55;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  margin: 5% 7%;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #fff;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  color: #67AAF9;
-}
-
-button:hover {
-  border-color: #058ed9;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 main {
   color: black;
   width: 100%;
-  min-height: 100vh;
+  flex: 1;
+}
+
+.header-name {
+  display: flex;              
+  align-items: center;        
+  justify-content: flex-start; 
+}
+
+.header-logo {
+  height: 100px;
+  margin-right: 10px; 
+}
+
+.footer-p { 
+  text-align: center;
+}
+
+.display-comm-box {
   display: flex;
-  flex-direction: row;
+  width: 50%;
+  margin-left: auto;
+  padding: 10px;            
+  font-size: 15px;          
+  border-radius: 5px;        
+  border: 1px solid rgb(95, 111, 82);
+  background: whitesmoke; 
+  color: black;
+}
+
+/* .display-comment {      
+  padding: 20px;            
+  font-size: 15px;          
+  border-radius: 5px;        
+  border: 1px solid rgb(95, 111, 82);
+  background: whitesmoke; 
+  color: black;
+} */
+
+a {
+  font-weight: 500;
+  color: rgb(95, 111, 82);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: rgb(185, 148, 112);
+}
+
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+  color: rgb(95, 111, 82);
+}
+
+h2 {
+  color: rgb(95, 111, 82);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h3 {
+  color: rgb(95, 111, 82);
+}
+
+h4 {
+  color: rgb(185, 148, 112);
 }
 
 tr {
   border-radius: 10px;
-  background-color: #000;
-  color: white;
+  background-color: whitesmoke;
+  color: rgb(169, 179, 136);
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #333333;
+  background-color: whitesmoke;
 }
 
-/* Navbar Content */
+/* Navbar Content
 .nav {
   display: flex;
   align-items: center;
@@ -112,7 +137,7 @@ tbody tr:nth-child(odd) {
 }
 
 .nav-title a {
-  color: #B95F89;
+  color: rgb(95, 111, 82);
 }
 
 .nav-item {
@@ -129,7 +154,7 @@ tbody tr:nth-child(odd) {
 .main-list > div > a {
   display: flex;
   justify-content: center;
-  color: #B95F89;
+  color: rgb(95, 111, 82);
 }
 
 .work-list {
@@ -144,8 +169,8 @@ tbody tr:nth-child(odd) {
   width: 300px;
   height: 300px;
   margin: 5% 5%;
-  border: 3px solid #424C55;
-  box-shadow: 10px 5px 5px black;
+  border: 3px solid rgb(185, 148, 112);
+  box-shadow: 10px 5px 5px rgb(185, 148, 112);
 }
 
 .volunteer {
@@ -158,7 +183,7 @@ tbody tr:nth-child(odd) {
 }
 
 .new-volunteer > a {
-  color: #B95F89;
+  color: rgb(169, 179, 136);
 }
 
 .volunteer-list {
@@ -172,42 +197,6 @@ tbody tr:nth-child(odd) {
   width: 250px;
   height: 300px;
   margin: 5% 5%;
-  border: 3px solid #424C55;
-  box-shadow: 10px 5px 5px black;
-}
-
-.form-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.form {
-  width: 50%;
-  height: 80%;
-  background-color: #E3D7FF;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.form > input {
-  margin-top: 3%;
-  margin-bottom: 3%;
-  text-align: center;
-}
-
-.form > label {
-  color: #4B6858;
-}
-
-.form > textarea {
-  width: 350px;
-  height: 100px;
-  text-align: center;
-}
-
-.form > select {
-  text-align: center;
-}
+  border: 3px solid rgb(95, 111, 82);
+  box-shadow: 10px 5px 5px rgb(95, 111, 82);
+} */

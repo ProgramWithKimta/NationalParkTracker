@@ -1,10 +1,8 @@
-import { Router } from 'express';
-// import { volunteerRouter } from './volunteer-routes.js';
-// import { workRouter } from './work-volunteer.js';
+import express from "express";
+import { commentRouter } from './comment-routes.js';
 
-const router = Router();
+const router = express.Router();
 
-// router.use('/volunteers', volunteerRouter);
-// router.use('/works', workRouter);
+router.use('/comment', commentRouter);
 
 export default router;
