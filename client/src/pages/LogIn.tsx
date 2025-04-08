@@ -4,7 +4,10 @@ import { useNavigate } from "react-router-dom";
 const LogIn= () =>{
     const navigate = useNavigate();
     const handleLogin = () => {
+
+        //login api call
         navigate('/HomePage');
+
     };
     return <>
 
