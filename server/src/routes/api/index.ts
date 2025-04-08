@@ -1,7 +1,10 @@
+
 import { Router } from 'express';
 import fetch from 'node-fetch';
+import express from "express";
+import { commentRouter } from './comment-routes.js';
 
-const router = Router();
+const router = express.Router();
 
 router.get('/parks', async (req, res) => {
     const { q = '', limit = '50', start = '0', sort = 'fullName' } = req.query;
@@ -27,5 +30,7 @@ router.get('/parks', async (req, res) => {
       return res.status(500).json({ error: 'An error occurred while fetching park data' });
     }
   });
+
+router.use('/comment', commentRouter);
 
 export default router;

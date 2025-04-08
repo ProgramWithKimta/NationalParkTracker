@@ -1,29 +1,31 @@
-import Header from "../components/header";
-import Footer from "../components/footer";
+import "../login.css";
+import { useNavigate } from "react-router-dom";
 
 function LogIn () {
+    const navigate = useNavigate();
+    const handleLogin = () => {
+        navigate('/HomePage');
+    };
     return <>
-    <Header />
+
     <div className="login-form">
 
-        <label htmlFor="username">Username</label> 
+        <label htmlFor="username"><h2>Username</h2></label> 
         <input
             type="text"
             id="username" />
         <br></br>
 
-        <label htmlFor="password">Password</label> 
+        <label htmlFor="password"><h2>Password</h2></label> 
         <input
             type="text"
             id="username" />
 
         <br></br>
 
-        <button className="login-btn" type="submit">Log In</button>
+        <button onClick={handleLogin} className="login-btn" type="submit">Log In</button>
 
     </div>
-
-    <Footer />
 
     </>
 }
