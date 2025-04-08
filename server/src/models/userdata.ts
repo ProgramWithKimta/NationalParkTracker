@@ -1,5 +1,5 @@
 import { DataTypes, Model, Optional } from 'sequelize';
-import sequelize from '../config/connection';
+import sequelize from '../config/connection.js';
 
 // Define the shape of attributes
 interface UserAttributes {
