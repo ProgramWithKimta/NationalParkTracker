@@ -1,5 +1,4 @@
-import { Router } from 'express';
-import fetch from 'node-fetch';
+//import { Router } from 'express';
 import express from "express";
 import { commentRouter } from './comment-routes.js';
 
@@ -13,7 +12,7 @@ router.get('/parks', async (req, res) => {
       console.log("API URL:", apiUrl); 
       const response = await fetch(apiUrl, {
         headers: {
-          'Authorization': `Bearer ${process.env.NPS_API_KEY || ''}`,
+          "X-Api-Key":"W3jCR6tphkhfJRbkvFvg4stXQjZ0ZWQi2tpt2k2A",
         },
       });
   
