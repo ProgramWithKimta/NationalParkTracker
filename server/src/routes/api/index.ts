@@ -5,7 +5,7 @@ import { commentRouter } from './comment-routes.js';
 const router = express.Router();
 
 router.get('/parks', async (req, res) => {
-    const { q = '', limit = '50', start = '0', sort = 'fullName' } = req.query;
+    const { q = '', limit = '1', start = '0', sort = 'fullName' } = req.query;
   
     try {
       const apiUrl = `https://developer.nps.gov/api/v1/parks?limit=${limit}&start=${start}&q=${q}&sort=${sort}`;

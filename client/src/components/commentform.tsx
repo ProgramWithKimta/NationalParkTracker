@@ -24,7 +24,7 @@ const CommentForm = () => {
       // Send the comment data to the server
       const data = await addComment(commentData);
       // Reload the page to reflect the new feedback
-      window.location.reload();
+      // window.location.reload();
     } catch (err) {
       console.error('Failed to add feedback', err);  // Log any errors that occur
     }
