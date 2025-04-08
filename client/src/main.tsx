@@ -1,11 +1,10 @@
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './index.css'
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './index.css';
 
 import App from './App.tsx';
 import HomePage from './pages/HomePage.tsx';
 import LogIn from './pages/LogIn.tsx';
-
 
 const router = createBrowserRouter([
   {
@@ -13,19 +12,19 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        index: true,
-        element: <LogIn />
-      }, 
+        index: true, // Default route
+        element: <HomePage />, // Render HomePage by default
+      },
       {
-        path: '/HomePage',
-        element: <HomePage />
-      }
-    ]
-  }
+        path: '/login',
+        element: <LogIn />, // Render LogIn for /login
+      },
+    ],
+  },
 ]);
 
 const rootElement = document.getElementById('root');
-if(rootElement) {
+if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <RouterProvider router={router} />
   );
