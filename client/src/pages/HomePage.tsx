@@ -1,17 +1,9 @@
 import React, { useState } from "react";
 import SearchBar from "../components/searchbar";
-
-// interface Park {
-//   fullName: string;
-//   description: string;
-//   states: string;
-//   directionsInfo: string;
-//   entranceFees: { cost: number; title: string }[];
-//   images: { url: string; altText: string }[];
-
 import "../homepage.css";
 import CommentForm from "../components/commentform";
 import DisplayComment from "../components/displaycomment";
+import Park from "../interfaces/ParkData";
 
 function HomePage () {
     return <>

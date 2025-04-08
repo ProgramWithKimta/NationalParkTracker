@@ -1,4 +1,3 @@
-
 import { Router } from 'express';
 import fetch from 'node-fetch';
 import express from "express";
@@ -29,7 +28,7 @@ router.get('/parks', async (req, res) => {
       console.error("Error fetching parks:", error);
       return res.status(500).json({ error: 'An error occurred while fetching park data' });
     }
-  });
+});
 
 router.use('/comment', commentRouter);
 
