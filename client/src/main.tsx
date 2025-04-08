@@ -6,7 +6,6 @@ import App from './App.tsx';
 import HomePage from './pages/HomePage.tsx';
 import LogIn from './pages/LogIn.tsx';
 
-
 const router = createBrowserRouter([
   {
     path: '/',
@@ -14,47 +13,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />
-      }, 
+        element: <LogIn />  // This will render on the root path
+      },
       {
-        path: '/login',
-        element: <LogIn />
-      }, 
+        path: '/homepage',
+        element: <HomePage />
+      },
     ]
   }
 ]);
 
 const rootElement = document.getElementById('root');
-if(rootElement) {
+if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <RouterProvider router={router} />
   );
 }
-
-//older version before Hoa worked on adding 
-// {
-  //path: '/login',  // This will render the LogIn component at the "/login" path
-  //element: <LogIn />
-// },
-//
-
-// const router = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: <App />,
-//     children: [
-//       {
-//         index: true,
-//         element: <LogIn />
-//       }, 
-//       {
-//         path: '/login',
-//         element: <LogIn />
-//       }, 
-//       {
-//         path: '/HomePage',
-//         element: <HomePage />
-//       }
-//     ]
-//   }
-// ]);

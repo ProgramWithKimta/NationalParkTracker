@@ -1,7 +1,7 @@
 import "../login.css";
 import { useNavigate } from "react-router-dom";
 
-const LogIn= () =>{
+function LogIn () {
     const navigate = useNavigate();
     const handleLogin = () => {
 
