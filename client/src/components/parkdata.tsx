@@ -1,22 +1,18 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Park } from "../interfaces/ParkData"; // Import the Park interface
 import SearchBar from "./searchbar";
 
-interface Park {
-  fullName: string;
-  description: string;
-  states: string;
-  directionsInfo: string;
-  entranceFees: { cost: number; title: string }[];
-  images: { url: string; altText: string }[];
-}
-
-function ParkData() {
+const ParkData: React.FC = () => {
   const [parks, setParks] = useState<Park[]>([]);
-  const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [searchHistory, setSearchHistory] = useState<string[]>([]); 
+  const [searchHistory, setSearchHistory] = useState<string[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
   const fetchParks = async (query: string) => {
+    setLoading(true);
+    setError(null);
+
     try {
       const response = await fetch(`/api/parks?q=${query}`);
       if (!response.ok) {
@@ -26,12 +22,9 @@ function ParkData() {
       const data = await response.json();
       setParks(data.data);
 
-      //search history
+      // Update search history
       if (query && !searchHistory.includes(query)) {
-        setSearchHistory((prevHistory) => {
-          const updatedHistory = [query, ...prevHistory];
-          return updatedHistory.slice(0, 2); // 2 searches
-        });
+        setSearchHistory((prevHistory) => [query, ...prevHistory].slice(0, 5));
       }
     } catch (err) {
       if (err instanceof Error) {
@@ -39,64 +32,69 @@ function ParkData() {
       } else {
         setError("An unknown error occurred");
       }
+    } finally {
+      setLoading(false);
     }
   };
-
-  useEffect(() => {
-    fetchParks(""); 
-  }, []);
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     fetchParks(searchTerm);
   };
 
+  useEffect(() => {
+    fetchParks(""); // Fetch all parks on initial load
+  }, []);
+
   if (error) {
-    return <div>Error: {error}</div>;
+    return <p style={{ color: "red" }}>Error: {error}</p>;
   }
 
   return (
     <div>
-      <h1>National Parks</h1>
       <SearchBar
         searchTerm={searchTerm}
         onSearchTermChange={setSearchTerm}
         onSearchSubmit={handleSearchSubmit}
-        searchHistory={searchHistory} 
+        searchHistory={searchHistory}
       />
-      {parks.map((park) => (
-        <div key={park.fullName} style={{ marginBottom: "20px" }}>
-          <h2>{park.fullName}</h2>
-          <p>{park.description}</p>
-          <p>
-            <strong>States:</strong> {park.states}
-          </p>
-          <p>
-            <strong>Directions:</strong> {park.directionsInfo}
-          </p>
-          <h3>Entrance Fees</h3>
-          <ul>
-            {park.entranceFees.map((fee, index) => (
-              <li key={index}>
-                {fee.title}: ${fee.cost}
-              </li>
-            ))}
-          </ul>
-          <h3>Images</h3>
-          <div>
-            {park.images.map((image, index) => (
-              <img
-                key={index}
-                src={image.url}
-                alt={image.altText}
-                style={{ width: "200px", marginRight: "10px" }}
-              />
-            ))}
-          </div>
-        </div>
-      ))}
+      {loading && <p>Loading...</p>}
+      {parks.length === 0 && !loading && <p>No results found.</p>}
+      <ul>
+        {parks.map((park) => (
+          <li key={park.id}>
+            <h3>{park.fullName}</h3>
+            <p>{park.description}</p>
+            <p>
+              <strong>States:</strong> {park.states}
+            </p>
+            <p>
+              <strong>Directions:</strong> {park.directionsInfo}
+            </p>
+            <h4>Entrance Fees:</h4>
+            <ul>
+              {park.entranceFees.map((fee, index) => (
+                <li key={index}>
+                  {fee.title}: ${fee.cost}
+                </li>
+              ))}
+            </ul>
+            <h4>Images:</h4>
+            <div>
+              {park.images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image.url}
+                  alt={image.altText}
+                  style={{ width: "200px", marginRight: "10px" }}
+                />
+              ))}
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
 
 export default ParkData;
