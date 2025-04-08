@@ -2,6 +2,7 @@ import express from 'express';
 import type { Request, Response} from 'express';
 import { Comment } from '../../models/index.js';
 
+
 const router = express.Router();
 
 // GET /comment - Get all comments
