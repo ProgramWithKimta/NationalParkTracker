@@ -41,7 +41,7 @@ body {
 
 
 main {
-  color: black;
+  color: rgb(110, 107, 107);
   width: 100%;
   flex: 1;
 }

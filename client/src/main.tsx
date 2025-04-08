@@ -1,6 +1,6 @@
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './index.css'
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './index.css';
 
 import App from './App.tsx';
 import HomePage from './pages/HomePage.tsx';
@@ -12,15 +12,15 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        index: true,
-        element: <LogIn />  // This will render on the root path
+        index: true, // Default route
+        element: <LogIn />, // Render HomePage by default
       },
       {
         path: '/homepage',
-        element: <HomePage />
+        element: <HomePage />, // Render LogIn for /login
       },
-    ]
-  }
+    ],
+  },
 ]);
 
 const rootElement = document.getElementById('root');
