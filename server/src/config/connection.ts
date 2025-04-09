@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import { Sequelize } from 'sequelize';
 
-const result = dotenv.config({ path: 'c:/Users/marlo/repos/projects/NationalParkTracker/.env' });
+const result = dotenv.config();
 
 
 if (result.error) {
