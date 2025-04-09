@@ -1,6 +1,7 @@
 //import { Router } from 'express';
 import express from "express";
-import { commentRouter } from './comment-routes.js';
+import { commentRouter } from './comment-routes.js';  // No need to add .ts, TypeScript handles it automatically
+import userRoutes from './user-routes.js'; // ✅ Import user-routes
 
 const router = express.Router();
 
@@ -28,6 +29,8 @@ router.get('/parks', async (req, res) => {
       return res.status(500).json({ error: 'An error occurred while fetching park data' });
     }
 });
+
+router.use('/user', userRoutes);
 
 router.use('/comment', commentRouter);
 

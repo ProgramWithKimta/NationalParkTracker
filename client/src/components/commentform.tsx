@@ -19,8 +19,9 @@ const CommentForm = () => {
     try {
       // Call the parent function to add the comment
       const data = await addComment(commentData);
-      // Clear the comment form after submission
-      setCommentData({ comment: '' });
+      console.log('Comment added successfully:', data); 
+      // Reload the page to reflect the new feedback
+      // window.location.reload();
     } catch (err) {
       console.error('Failed to add feedback', err);  // Log any errors that occur
     }
