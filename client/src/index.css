@@ -41,7 +41,7 @@ body {
 
 
 main {
-  color: black;
+  color: rgb(110, 107, 107);
   width: 100%;
   flex: 1;
 }
@@ -64,7 +64,7 @@ main {
 .display-comm-box {
   display: flex;
   width: 50%;
-  margin-left: auto;
+  margin-top: 15px;
   padding: 10px;            
   font-size: 15px;          
   border-radius: 5px;        
