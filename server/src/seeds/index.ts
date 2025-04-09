@@ -1,23 +1,27 @@
-import User from '../models/userdata.js';  // Make sure the import is correct
+import bcrypt from 'bcryptjs';
+import User from '../models/userdata.js'
 
 const seedUsers = async () => {
-  try {
-    await User.bulkCreate([
-      {
-        username: 'john_doe',
-        password: 'password123',
-        email: 'john_doe@example.com',  // Include email here
-      },
-      {
-        username: 'jane_doe',
-        password: 'password456',
-        email: 'jane_doe@example.com',  // Include email here
-      },
-    ]);
-    console.log('Users seeded successfully!');
-  } catch (error) {
-    console.error('Error seeding users:', error);
-  }
-};
-
-seedUsers();
+    try {
+      const hashedPassword = await bcrypt.hash('password123', 10);  // Hash the password
+  
+      await User.bulkCreate([
+        {
+          username: 'john_doe',
+          password_hash: hashedPassword, // Use hashed password
+          email: 'john_doe@example.com',
+        },
+        {
+          username: 'jane_doe',
+          password_hash: hashedPassword, // Use hashed password
+          email: 'jane_doe@example.com',
+        },
+      ]);
+  
+      console.log("Users seeded successfully!");
+    } catch (err) {
+      console.error("Error seeding users:", err);
+    }
+  };
+  
+  seedUsers();

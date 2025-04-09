@@ -23,6 +23,7 @@ const CommentForm = () => {
     try {
       // Send the comment data to the server
       const data = await addComment(commentData);
+      console.log('Comment added successfully:', data); 
       // Reload the page to reflect the new feedback
       // window.location.reload();
     } catch (err) {

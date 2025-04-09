@@ -5,8 +5,8 @@ import sequelize from '../config/connection.js';
 interface UserAttributes {
   id: number;
   username: string;
-  password: string;
-  email: string;  // Add email here
+  password_hash: string;  // Change password to password_hash for secure storage
+  email: string;
 }
 
 // Make `id` optional for creation, and allow email to be set as well
@@ -16,8 +16,8 @@ interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
 export class User extends Model<UserAttributes, UserCreationAttributes> implements UserAttributes {
   public id!: number;
   public username!: string;
-  public password!: string;
-  public email!: string;  // Add email to the class properties
+  public password_hash!: string;  // Change password to password_hash
+  public email!: string;
 
   // timestamps (optional)
   public readonly createdAt!: Date;
@@ -37,21 +37,21 @@ User.init(
       allowNull: false,
       unique: true,
     },
-    password: {
+    password_hash: {  // Change to password_hash for storing the hashed password
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {  // Add email field to the Sequelize model
+    email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,  // Assuming you want the email to be unique
+      unique: true,
     },
   },
   {
     sequelize,
-    tableName: 'Users',
-    modelName: 'User',
-    timestamps: true, // You can set this to false if you don't want createdAt/updatedAt
+    tableName: 'users',
+    // modelName: 'users',
+      // Optionally, set to false if you don't need createdAt/updatedAt
   }
 );
 
