@@ -25,7 +25,7 @@ function LogIn() {
         // store auth token or user data if needed
         localStorage.setItem("authToken", data.token);
         // navigate to homepage with username
-        navigate("/", { state: { username: data.username } });
+        navigate("/homepage", { state: { username: data.username } });
       } else {
         setError(data.message || "Login failed. Please try again.");
       }
