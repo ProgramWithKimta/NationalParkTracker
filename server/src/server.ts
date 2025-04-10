@@ -17,6 +17,7 @@ app.use(cors({
   origin: ['http://localhost:3000', 'http://localhost:3001', 'https://nationalparktracker2.onrender.com'], // Allow only requests from this origin
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Specify the allowed headers
+  credentials: true,
 }));
 
 
