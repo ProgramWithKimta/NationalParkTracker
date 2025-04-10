@@ -1,32 +1,3 @@
-// import { useState, FormEvent, ChangeEvent } from "react";
-// import { addComment } from "../api/commentsAPI";   // Import the function to add comment from the API
-
-// const CommentForm = () => {
-//   const [commentData, setCommentData] = useState({
-//     comment: ''
-//   });
-
-//   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-//     const { name, value } = e.target;
-//     setCommentData({
-//       ...commentData,
-//       [name]: value
-//     });
-//   };
-
-//   const handleSubmit = async (e: FormEvent) => {
-//     e.preventDefault();
-//     try {
-//       // Call the parent function to add the comment
-//       const data = await addComment(commentData);
-//       console.log('Comment added successfully:', data); 
-//       // Reload the page to reflect the new feedback
-//       // window.location.reload();
-//     } catch (err) {
-//       console.error('Failed to add feedback', err);  // Log any errors that occur
-//     }
-//   };
-
 import { useState, FormEvent, ChangeEvent } from "react";
 
 type Props = {
@@ -56,7 +27,7 @@ const CommentForm = ({ onAddComment }: Props) => {
       <form
         className="flex-row justify-center justify-space-between-md align-center"
         id="comment-form"
-        onSubmit={handleSubmit}  // Attach the submit handler
+        onSubmit={handleSubmit}
       >
         <div className="col-12">
           <textarea
