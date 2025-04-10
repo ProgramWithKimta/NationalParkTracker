@@ -57,12 +57,17 @@ main {
   margin-right: 10px; 
 }
 
+.loginbtn-hp {
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
 .footer-p { 
   text-align: center;
 }
 
 .display-comm-box {
-  display: flex;
+  list-style-type: disc;
   width: 50%;
   margin-top: 15px;
   padding: 10px;            
@@ -72,15 +77,6 @@ main {
   background: whitesmoke; 
   color: black;
 }
-
-/* .display-comment {      
-  padding: 20px;            
-  font-size: 15px;          
-  border-radius: 5px;        
-  border: 1px solid rgb(95, 111, 82);
-  background: whitesmoke; 
-  color: black;
-} */
 
 a {
   font-weight: 500;

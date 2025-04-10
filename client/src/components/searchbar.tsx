@@ -17,7 +17,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
   return (
     <div style={{ position: "relative" }}>
-      <form onSubmit={onSearchSubmit} style={{ marginBottom: "20px" }}>
+      <form onSubmit={onSearchSubmit} style={{ marginBottom: "20px", marginLeft: "20px" }}>
         <input
           type="text"
           placeholder="Search parks..."
