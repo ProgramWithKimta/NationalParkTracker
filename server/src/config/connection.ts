@@ -1,8 +1,10 @@
 import dotenv from 'dotenv';
 import { Sequelize } from 'sequelize';
 
+
 // Load the .env file from the server directory
 dotenv.config();
+
 
 const sequelize = new Sequelize({
   host: process.env.DB_HOST ?? 'localhost', // Default to 'localhost' if undefined
