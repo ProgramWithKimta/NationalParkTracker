@@ -7,7 +7,6 @@ dotenv.config();
 
 
 const sequelize = new Sequelize(process.env.DATABASE_URL!, {
-  host: process.env.DB_HOST ?? 'localhost', // Default to 'localhost' if undefined
   port: Number(process.env.DB_PORT ?? 5432), // Default to 5432 for PostgreSQL
   dialect: 'postgres', // Assuming you're using PostgreSQL
 });
