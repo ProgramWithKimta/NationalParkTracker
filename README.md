@@ -28,6 +28,13 @@ This project is licensed under MIT.
 Repo: https://github.com/ProgramWithKimta/NationalParkTracker
 <br>
 Deployed Page: https://nationalparktracker2.onrender.com
+<br>
+Render.com
+<br>
+Freepik.com
+<br>
+colorhunt.io
+<br>
 
 ## Contributors
 Our Github Handle
