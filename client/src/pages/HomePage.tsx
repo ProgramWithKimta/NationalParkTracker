@@ -12,14 +12,8 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="homepage">
-      {username && <h2>Hi! {username}</h2>}
-
-      {/* <div style={{ marginBottom: "1rem" }}>
-        <Link to="/">
-          <button className="login-homepage">Log In</button>
-        </Link>
-      </div> */}
-      
+      {username && <h2 style={{ marginLeft:"20px" }}>Hi {username}</h2>}
+      <br></br>
       <ParkData />
       <CommentSection />
     </div>

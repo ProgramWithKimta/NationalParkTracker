@@ -29,7 +29,7 @@ const CommentForm = ({ onAddComment }: Props) => {
         id="comment-form"
         onSubmit={handleSubmit}
       >
-        <div className="col-12">
+        <div className="col-12" style={{ marginLeft:"20px"}}>
           <textarea
             name="comment"
             placeholder="got a comment?"
@@ -38,7 +38,7 @@ const CommentForm = ({ onAddComment }: Props) => {
             onChange={handleChange}></textarea>
         </div>
         <div className="col-12 col-lg-3">
-          <button className="btn btn-primary btn-block py-3" type="submit">
+          <button className="btn btn-primary btn-block py-3" type="submit" style={{marginLeft:"20px"}}>
             Add Comment
           </button>
         </div>

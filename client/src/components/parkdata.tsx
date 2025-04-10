@@ -58,17 +58,17 @@ const ParkData: React.FC = () => {
         onSearchSubmit={handleSearchSubmit}
         searchHistory={searchHistory}
       />
-      {loading && <p>Loading...</p>}
-      {parks.length === 0 && !loading && <p>No results found.</p>}
+      {loading && <p style={{ marginLeft:"20px"}}>Loading...</p>}
+      {parks.length === 0 && !loading && <p style={{ marginLeft:"20px"}}>No results found.</p>}
       <ul>
         {parks.map((park) => (
           <li key={park.id}>
             <h3>{park.fullName}</h3>
-            <p>{park.description}</p>
+            <p style={{ marginRight:"50px"}}>{park.description}</p>
             <p>
               <strong>States:</strong> {park.states}
             </p>
-            <p>
+            <p style={{ marginRight:"50px"}}>
               <strong>Directions:</strong> {park.directionsInfo}
             </p>
             <h4>Entrance Fees:</h4>

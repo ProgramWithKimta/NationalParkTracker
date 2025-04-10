@@ -67,7 +67,7 @@ main {
 }
 
 .display-comm-box {
-  display: flex;
+  list-style-type: disc;
   width: 50%;
   margin-top: 15px;
   padding: 10px;            
