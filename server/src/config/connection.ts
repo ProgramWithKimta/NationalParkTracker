@@ -1,15 +1,14 @@
 import dotenv from 'dotenv';
-import { Sequelize } from 'sequelize';
 
-
-// Load the .env file from the server directory
 dotenv.config();
 
+import { Sequelize } from 'sequelize';
 
-const sequelize = new Sequelize(process.env.DATABASE_URL!, {
-  host: process.env.DB_HOST ?? 'localhost', // Default to 'localhost' if undefined
-  port: Number(process.env.DB_PORT ?? 5432), // Default to 5432 for PostgreSQL
-  dialect: 'postgres', // Assuming you're using PostgreSQL
+console.log('DATABASE_URL:', process.env.DATABASE_URL);
+
+const sequelize = new Sequelize('postgresql://npdtracker_db_user:Zt0YMlmfrGAtYxqaRkxGd5WZVuv2bjyg@dpg-cvqtgj95pdvs73e47v60-a/npdtracker_db', {
+  port: Number(process.env.DB_PORT ?? 5432),
+  dialect: 'postgres',
 });
 
 export default sequelize;
