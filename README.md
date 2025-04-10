@@ -27,7 +27,7 @@ This project is licensed under MIT.
 ## References
 Repo: https://github.com/ProgramWithKimta/NationalParkTracker
 <br>
-Deployed Page: https://nationalparktracker.onrender.com
+Deployed Page: https://nationalparktracker2.onrender.com
 
 ## Contributors
 Our Github Handle
