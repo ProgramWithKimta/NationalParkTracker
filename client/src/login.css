@@ -30,6 +30,17 @@ body {
     background: whitesmoke; 
     color: black;
   }
+
+  input[type="password"],
+  textarea {
+    max-width: 100%;               
+    padding: 12px;            
+    font-size: 15px;          
+    border-radius: 5px;        
+    border: 1px solid rgb(95, 111, 82);
+    background: whitesmoke; 
+    color: black;
+  }
   
   textarea {
     resize: vertical;          
