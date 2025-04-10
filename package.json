@@ -8,7 +8,7 @@
     "dev": "npm i && npm run seed && npm run build && npm run start:dev",
     "start": "npm run client:build && npm run server",
     "start:dev": "concurrently \"npm run server:dev\" \"wait-on tcp:3001 && npm run client:dev\"",
-    "server": "cd server && npm start",
+    "server": "cd server && npm start & npm run seed",
     "server:dev": "cd server && npm run dev",
     "install": "cd server && npm i && cd ../client && npm i",
     "client:build": "cd client && npm run build",
